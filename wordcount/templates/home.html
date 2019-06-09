@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .element {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        body {
+          background: url('https://cdn.pixabay.com/photo/2017/08/02/14/26/winter-landscape-2571788_1280.jpg') no-repeat center center fixed;
+      
+          -webkit-background-size: cover;
+      
+          -moz-background-size: cover;
+      
+          -o-background-size: cover;
+      
+          background-size: cover;
+          }
+
+      </style>
+    <title>Home</title>
+</head>
+<body>
+    <div class="element" style="width: 500px">
+
+
+    <br>
+    <h2>안녕하세요 워드 카운트 사이트입니다.</h2>
+    <br>
+    </div>
+    <div class="element" style="width: 500px">
+    <form action ="{%url 'result' %}">
+        <textarea cols="80" rows="30" name="fulltext"></textarea>
+        <br>
+        <input type="submit" value="count">
+
+    </form>
+    </div>
+    </div>
+</body>
+</html>

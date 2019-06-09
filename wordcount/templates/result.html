@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>result</title>
+    <style>
+        .element {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        body {
+          background: url('https://cdn.pixabay.com/photo/2017/08/02/14/26/winter-landscape-2571788_1280.jpg') no-repeat center center fixed;
+      
+          -webkit-background-size: cover;
+      
+          -moz-background-size: cover;
+      
+          -o-background-size: cover;
+      
+          background-size: cover;
+          }
+
+      </style>
+      
+</head>
+<body>
+    <div class="element" style="width: 400px">
+    <h2>당신이 입력한 텍스트는 총 "{{total}}"개의 단어로 구성되어 있습니다.</h2>
+    <br>
+    <a href = "{% url 'home' %}">다시 입력하기</a>
+    <br>
+    <h2> 입력한 텍스트: </h2>
+    {{full}}
+    
+    <h2> 단어 카운트: </h2>
+    {% for word, howmany in dictionary %}
+
+    {{word}} : {{howmany}}개
+    <br>
+    {% endfor %}
+    </div>
+
+</body>
+</html>
